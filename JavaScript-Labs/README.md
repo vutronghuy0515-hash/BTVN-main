@@ -53,5 +53,8 @@ Trong quá trình thực hành, một số tài nguyên gốc theo tài liệu h
 ## 7. Liên kết GitHub
 
 - GitHub cá nhân: [github.com/vutronghuy0515-hash](https://github.com/vutronghuy0515-hash)
-- GitHub Repository: [github.com/vutronghuy0515-hash/BTVN](https://github.com/vutronghuy0515-hash/BTVN) (sẽ chứa thư mục `JavaScript-Labs`)
-- GitHub Pages: Chưa cập nhật (dự kiến dạng `https://vutronghuy0515-hash.github.io/BTVN/JavaScript-Labs/` sau khi triển khai).
+- GitHub Repository: [github.com/vutronghuy0515-hash/BTVN-main](https://github.com/vutronghuy0515-hash/BTVN-main)
+- GitHub Pages - Trang chủ: [vutronghuy0515-hash.github.io/BTVN-main/JavaScript-Labs/](https://vutronghuy0515-hash.github.io/BTVN-main/JavaScript-Labs/)
+  - Lab 08: [vutronghuy0515-hash.github.io/BTVN-main/JavaScript-Labs/Lab08/](https://vutronghuy0515-hash.github.io/BTVN-main/JavaScript-Labs/Lab08/)
+  - Lab 09: [vutronghuy0515-hash.github.io/BTVN-main/JavaScript-Labs/Lab09/](https://vutronghuy0515-hash.github.io/BTVN-main/JavaScript-Labs/Lab09/)
+  - Lab 10: [vutronghuy0515-hash.github.io/BTVN-main/JavaScript-Labs/Lab10/](https://vutronghuy0515-hash.github.io/BTVN-main/JavaScript-Labs/Lab10/)
