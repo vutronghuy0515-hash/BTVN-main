@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trạng thái đơn hàng - Mây Basic</title>
+
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+                    <span class="sr-only">Mở menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="ecommerce.html">
+                    <img src="images/logo.png" alt="Mây Basic" height="30">
+                </a>
+                <form class="visible-xs-inline-block search-form search-mobile">
+                    <div class="form-group">
+                        <input type="text" class="form-control search-input" placeholder="Tìm sản phẩm...">
+                    </div>
+                </form>
+            </div>
+
+            <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="ecommerce.html">Trang chủ</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Danh mục <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ecommerce.html#ao-thun">Áo thun</a></li>
+                            <li><a href="ecommerce.html#ao-so-mi">Áo sơ mi</a></li>
+                            <li><a href="ecommerce.html#quan">Quần</a></li>
+                            <li><a href="ecommerce.html#ao-khoac">Áo khoác</a></li>
+                            <li><a href="ecommerce.html#vay">Váy</a></li>
+                            <li><a href="ecommerce.html#phu-kien">Phụ kiện</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="ecommerce.html">Tất cả sản phẩm</a></li>
+                        </ul>
+                    </li>
+                    <li class="active"><a href="ecommerce-status.html">Đơn hàng <span class="sr-only">(hiện tại)</span></a></li>
+                </ul>
+                <form class="navbar-form navbar-left hidden-xs search-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control search-input" placeholder="Tìm sản phẩm...">
+                    </div>
+                    <button type="submit" class="btn btn-default">Tìm</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" class="cart-link" title="Giỏ hàng">
+                            <span class="badge pull-right cart-count">0</span>
+                            <i class="glyphicon glyphicon-shopping-cart"></i>
+                            <span class="visible-xs-inline">Giỏ hàng</span>
+                        </a>
+                    </li>
+                    <li class="active"><a href="ecommerce-status.html" title="Tài khoản"><i class="glyphicon glyphicon-user"></i> Tài khoản</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <!-- ================= Sidebar: Manage Orders ================= -->
+            <div class="col-sm-4 col-md-3">
+                <h3>Manage Orders</h3>
+                <div class="list-group manage-menu">
+                    <a href="#" class="list-group-item active" data-panel="#panel-orders">All Order</a>
+                    <a href="#" class="list-group-item" data-panel="#panel-feedback">Manage Feedback</a>
+                    <a href="#" class="list-group-item" data-panel="#panel-coupons">My Coupons</a>
+                    <a href="#" class="list-group-item" data-panel="#panel-address">My Shipping Address</a>
+                </div>
+            </div>
+
+            <div class="col-sm-8 col-md-9">
+
+                <!-- ================= Orders Status ================= -->
+                <div class="manage-panel" id="panel-orders">
+                    <h3>Orders Status</h3>
+
+                    <!-- Dòng tiêu đề cột (ẩn trên Mobile) -->
+                    <div class="row order-head hidden-xs">
+                        <div class="col-sm-5">Sản phẩm</div>
+                        <div class="col-sm-1">SL</div>
+                        <div class="col-sm-2">Giá</div>
+                        <div class="col-sm-2">Trạng thái</div>
+                        <div class="col-sm-2">Tin nhắn</div>
+                    </div>
+
+                    <!-- Đơn 1 -->
+                    <div class="thumbnail order-row">
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-1">
+                                <img class="img-responsive" src="images/products/ao-thun-trang.jpg" alt="Áo thun Basic Cotton trắng">
+                            </div>
+                            <div class="col-xs-9 col-sm-4">
+                                <a href="ecommerce-detail.html">Áo thun Basic Cotton trắng</a>
+                                <div class="order-meta">Mã đơn #MB1025 · Màu trắng, size M</div>
+                                <span class="label label-info">Đang giao hàng</span>
+                            </div>
+                            <div class="col-xs-3 col-sm-1"><span class="visible-xs-inline">SL: </span>2</div>
+                            <div class="col-xs-4 col-sm-2 order-price">318.000đ</div>
+                            <div class="col-xs-5 col-sm-2">
+                                <button class="btn btn-sm btn-default btn-track" data-info="Đơn #MB1025 đã rời kho Thủ Đức, dự kiến giao ngày 27/11/2026.">Track</button>
+                            </div>
+                            <div class="col-xs-12 col-sm-2"><a href="#">1 tin nhắn</a></div>
+                        </div>
+                        <div class="track-info alert alert-info" style="display:none"></div>
+                    </div>
+
+                    <!-- Đơn 2 -->
+                    <div class="thumbnail order-row">
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-1">
+                                <img class="img-responsive" src="images/products/quan-jean-slim.jpg" alt="Quần jean Slim Fit">
+                            </div>
+                            <div class="col-xs-9 col-sm-4">
+                                <a href="ecommerce-detail.html">Quần jean Slim Fit</a>
+                                <div class="order-meta">Mã đơn #MB1018 · Size 30</div>
+                                <span class="label label-success">Đã giao</span>
+                            </div>
+                            <div class="col-xs-3 col-sm-1"><span class="visible-xs-inline">SL: </span>1</div>
+                            <div class="col-xs-4 col-sm-2 order-price">399.000đ</div>
+                            <div class="col-xs-5 col-sm-2">
+                                <button class="btn btn-sm btn-success">Completed</button>
+                            </div>
+                            <div class="col-xs-12 col-sm-2"><a href="#">1 tin nhắn</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Đơn 3 -->
+                    <div class="thumbnail order-row">
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-1">
+                                <img class="img-responsive" src="images/products/vay-midi-hoa.jpg" alt="Váy midi hoa nhí">
+                            </div>
+                            <div class="col-xs-9 col-sm-4">
+                                <a href="ecommerce-detail.html">Váy midi hoa nhí</a>
+                                <div class="order-meta">Mã đơn #MB1011 · Size S</div>
+                                <span class="label label-danger">Đã hủy</span>
+                            </div>
+                            <div class="col-xs-3 col-sm-1"><span class="visible-xs-inline">SL: </span>1</div>
+                            <div class="col-xs-4 col-sm-2 order-price">349.000đ</div>
+                            <div class="col-xs-5 col-sm-2">
+                                <button class="btn btn-sm btn-danger">Cancelled</button>
+                            </div>
+                            <div class="col-xs-12 col-sm-2"><a href="#">0 tin nhắn</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Đơn 4 -->
+                    <div class="thumbnail order-row">
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-1">
+                                <img class="img-responsive" src="images/products/ao-khoac-bomber.jpg" alt="Áo khoác Bomber kaki">
+                            </div>
+                            <div class="col-xs-9 col-sm-4">
+                                <a href="ecommerce-detail.html">Áo khoác Bomber kaki</a>
+                                <div class="order-meta">Mã đơn #MB1009 · Size L</div>
+                                <span class="label label-warning">Đang chuẩn bị hàng</span>
+                            </div>
+                            <div class="col-xs-3 col-sm-1"><span class="visible-xs-inline">SL: </span>1</div>
+                            <div class="col-xs-4 col-sm-2 order-price">479.000đ</div>
+                            <div class="col-xs-5 col-sm-2">
+                                <button class="btn btn-sm btn-default btn-track" data-info="Đơn #MB1009 đang được đóng gói tại kho, dự kiến bàn giao vận chuyển ngày 26/11/2026.">Track</button>
+                            </div>
+                            <div class="col-xs-12 col-sm-2"><a href="#">2 tin nhắn</a></div>
+                        </div>
+                        <div class="track-info alert alert-info" style="display:none"></div>
+                    </div>
+
+                    <!-- Đơn 5 -->
+                    <div class="thumbnail order-row">
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-1">
+                                <img class="img-responsive" src="images/products/tui-tote-canvas.jpg" alt="Túi tote canvas Mây">
+                            </div>
+                            <div class="col-xs-9 col-sm-4">
+                                <a href="ecommerce-detail.html">Túi tote canvas Mây</a>
+                                <div class="order-meta">Mã đơn #MB1002 · Màu be</div>
+                                <span class="label label-success">Đã giao</span>
+                            </div>
+                            <div class="col-xs-3 col-sm-1"><span class="visible-xs-inline">SL: </span>3</div>
+                            <div class="col-xs-4 col-sm-2 order-price">387.000đ</div>
+                            <div class="col-xs-5 col-sm-2">
+                                <button class="btn btn-sm btn-success">Completed</button>
+                            </div>
+                            <div class="col-xs-12 col-sm-2"><a href="#">1 tin nhắn</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Đơn 6 -->
+                    <div class="thumbnail order-row">
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-1">
+                                <img class="img-responsive" src="images/products/mu-luoi-trai.jpg" alt="Mũ lưỡi trai basic đen">
+                            </div>
+                            <div class="col-xs-9 col-sm-4">
+                                <a href="ecommerce-detail.html">Mũ lưỡi trai basic đen</a>
+                                <div class="order-meta">Mã đơn #MB0997 · Màu đen</div>
+                                <span class="label label-info">Đang giao hàng</span>
+                            </div>
+                            <div class="col-xs-3 col-sm-1"><span class="visible-xs-inline">SL: </span>1</div>
+                            <div class="col-xs-4 col-sm-2 order-price">99.000đ</div>
+                            <div class="col-xs-5 col-sm-2">
+                                <button class="btn btn-sm btn-default btn-track" data-info="Đơn #MB0997 đang được shipper giao, vui lòng giữ điện thoại.">Track</button>
+                            </div>
+                            <div class="col-xs-12 col-sm-2"><a href="#">1 tin nhắn</a></div>
+                        </div>
+                        <div class="track-info alert alert-info" style="display:none"></div>
+                    </div>
+                </div>
+
+                <!-- ================= Manage Feedback ================= -->
+                <div class="manage-panel" id="panel-feedback" style="display:none">
+                    <h3>Manage Feedback</h3>
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <strong>Quần jean Slim Fit</strong> – 5 sao
+                            <p class="list-group-item-text">Quần đẹp, vải dày dặn, mặc rất thoải mái.</p>
+                        </div>
+                        <div class="list-group-item">
+                            <strong>Túi tote canvas Mây</strong> – 4 sao
+                            <p class="list-group-item-text">Túi chắc chắn, màu be dễ phối đồ.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= My Coupons ================= -->
+                <div class="manage-panel" id="panel-coupons" style="display:none">
+                    <h3>My Coupons</h3>
+                    <div class="list-group">
+                        <div class="list-group-item"><span class="badge">HSD 31/12/2026</span><strong>MAYBASIC50K</strong> – Giảm 50.000đ cho đơn từ 499.000đ</div>
+                        <div class="list-group-item"><span class="badge">HSD 15/12/2026</span><strong>FREESHIP</strong> – Miễn phí vận chuyển đơn từ 199.000đ</div>
+                    </div>
+                </div>
+
+                <!-- ================= My Shipping Address ================= -->
+                <div class="manage-panel" id="panel-address" style="display:none">
+                    <h3>My Shipping Address</h3>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <strong>Địa chỉ mặc định</strong><br>
+                            59C Nguyễn Đình Chiểu, Phường Võ Thị Sáu, Quận 3, TP. Hồ Chí Minh<br>
+                            <span class="text-muted">(Dữ liệu mẫu)</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Mây Basic – Thời trang cơ bản cho mọi ngày. Bài tập học phần Phát triển ứng dụng TMĐT.</p>
+        </div>
+    </footer>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

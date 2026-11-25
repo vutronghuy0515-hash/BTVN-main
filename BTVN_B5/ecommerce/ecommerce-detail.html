@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Áo thun Basic Cotton trắng - Mây Basic</title>
+
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <!-- Thư viện xZoom: hiển thị, chọn và zoom ảnh -->
+    <link rel="stylesheet" href="lib/xzoom.css">
+    <!-- Thư viện Bootstrap Star Rating -->
+    <link rel="stylesheet" href="lib/star-rating.min.css">
+    <link rel="stylesheet" href="lib/svg-theme.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+                    <span class="sr-only">Mở menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="ecommerce.html">
+                    <img src="images/logo.png" alt="Mây Basic" height="30">
+                </a>
+                <form class="visible-xs-inline-block search-form search-mobile">
+                    <div class="form-group">
+                        <input type="text" class="form-control search-input" placeholder="Tìm sản phẩm...">
+                    </div>
+                </form>
+            </div>
+
+            <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="ecommerce.html">Trang chủ</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Danh mục <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ecommerce.html#ao-thun">Áo thun</a></li>
+                            <li><a href="ecommerce.html#ao-so-mi">Áo sơ mi</a></li>
+                            <li><a href="ecommerce.html#quan">Quần</a></li>
+                            <li><a href="ecommerce.html#ao-khoac">Áo khoác</a></li>
+                            <li><a href="ecommerce.html#vay">Váy</a></li>
+                            <li><a href="ecommerce.html#phu-kien">Phụ kiện</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="ecommerce.html">Tất cả sản phẩm</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="ecommerce-status.html">Đơn hàng</a></li>
+                </ul>
+                <form class="navbar-form navbar-left hidden-xs search-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control search-input" placeholder="Tìm sản phẩm...">
+                    </div>
+                    <button type="submit" class="btn btn-default">Tìm</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" class="cart-link" title="Giỏ hàng">
+                            <span class="badge pull-right cart-count">0</span>
+                            <i class="glyphicon glyphicon-shopping-cart"></i>
+                            <span class="visible-xs-inline">Giỏ hàng</span>
+                        </a>
+                    </li>
+                    <li><a href="ecommerce-status.html" title="Tài khoản"><i class="glyphicon glyphicon-user"></i> Tài khoản</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="ecommerce.html">Trang chủ</a></li>
+            <li><a href="ecommerce.html#ao-thun">Áo thun</a></li>
+            <li class="active">Áo thun Basic Cotton trắng</li>
+        </ol>
+
+        <div class="row">
+            <!-- ================= CATEGORIES ================= -->
+            <div class="col-sm-4 col-md-3">
+                <h3>Danh mục</h3>
+                <div class="list-group">
+                    <a href="ecommerce.html" class="list-group-item">Tất cả sản phẩm</a>
+                    <a href="ecommerce.html#ao-thun" class="list-group-item active">Áo thun</a>
+                    <a href="ecommerce.html#ao-so-mi" class="list-group-item">Áo sơ mi</a>
+                    <a href="ecommerce.html#quan" class="list-group-item">Quần</a>
+                    <a href="ecommerce.html#ao-khoac" class="list-group-item">Áo khoác</a>
+                    <a href="ecommerce.html#vay" class="list-group-item">Váy</a>
+                    <a href="ecommerce.html#phu-kien" class="list-group-item">Phụ kiện</a>
+                </div>
+            </div>
+
+            <div class="col-sm-8 col-md-9">
+                <!-- ================= 2.2.1 Layout: Hình | Mô tả ================= -->
+                <div class="thumbnail product-detail">
+                    <div class="row">
+
+                        <!-- ===== 2.2.2 Ảnh lớn + ảnh nhỏ (xZoom) ===== -->
+                        <div class="col-sm-6">
+                            <!--
+                                Ảnh chính: class "xzoom"
+                                - src: ảnh xem trước (750x600)
+                                - xoriginal: ảnh gốc kích thước lớn (1500x1200) dùng để zoom
+                            -->
+                            <div class="xzoom-container">
+                                <img class="xzoom img-responsive" id="xzoom-main"
+                                     src="images/detail/ao-thun-1.jpg"
+                                     xoriginal="images/detail/ao-thun-1-large.jpg"
+                                     alt="Áo thun Basic Cotton trắng">
+                            </div>
+
+                            <!--
+                                Ảnh nhỏ: class "xzoom-gallery", đặt trong thẻ <a>
+                                - href: ảnh gốc lớn
+                                - src: ảnh nhỏ (thumbnail)
+                                - xpreview: ảnh hiện lên ở khung ảnh chính khi chọn
+                            -->
+                            <div class="thumbnails row xzoom-thumbs">
+                                <div class="col-xs-3">
+                                    <a href="images/detail/ao-thun-1-large.jpg">
+                                        <img class="xzoom-gallery img-thumbnail img-responsive" src="images/detail/ao-thun-1-thumb.jpg" xpreview="images/detail/ao-thun-1.jpg" alt="Màu trắng">
+                                    </a>
+                                </div>
+                                <div class="col-xs-3">
+                                    <a href="images/detail/ao-thun-2-large.jpg">
+                                        <img class="xzoom-gallery img-thumbnail img-responsive" src="images/detail/ao-thun-2-thumb.jpg" xpreview="images/detail/ao-thun-2.jpg" alt="Màu đen">
+                                    </a>
+                                </div>
+                                <div class="col-xs-3">
+                                    <a href="images/detail/ao-thun-3-large.jpg">
+                                        <img class="xzoom-gallery img-thumbnail img-responsive" src="images/detail/ao-thun-3-thumb.jpg" xpreview="images/detail/ao-thun-3.jpg" alt="Màu xanh rêu">
+                                    </a>
+                                </div>
+                                <div class="col-xs-3">
+                                    <a href="images/detail/ao-thun-4-large.jpg">
+                                        <img class="xzoom-gallery img-thumbnail img-responsive" src="images/detail/ao-thun-4-thumb.jpg" xpreview="images/detail/ao-thun-4.jpg" alt="Chất liệu vải">
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-muted small zoom-hint"><i class="glyphicon glyphicon-zoom-in"></i> Rê chuột vào ảnh để phóng to, bấm ảnh nhỏ để đổi ảnh.</p>
+                        </div>
+
+                        <!-- ===== 2.2.3 Mô tả + 2.2.4 Form ===== -->
+                        <div class="col-sm-6">
+                            <div class="caption detail-info product" data-price="159000" data-old-price="199000">
+                                <h4 class="pull-right price detail-price"></h4>
+                                <h4 class="product-name"><a href="ecommerce-detail.html">Áo thun Basic Cotton trắng</a></h4>
+                                <p><del class="old-price"></del> <span class="label label-danger discount-text"></span></p>
+                                <p>
+                                    Áo thun cổ tròn may từ cotton 100% co giãn 4 chiều, thấm hút mồ hôi tốt.
+                                    Form regular vừa vặn, dễ phối cùng quần jean, quần kaki hay chân váy.
+                                    Đường may kép chắc chắn, giặt máy không bai dão.
+                                </p>
+
+                                <form role="form" id="add-cart-form">
+                                    <div class="number form-group">
+                                        <label for="number">Số lượng</label>
+                                        <input type="number" class="form-control input-sm" id="number" value="1" min="1" max="10">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="color">Màu sắc</label>
+                                        <select id="color" class="form-control input-sm">
+                                            <option value="0">Trắng</option>
+                                            <option value="1">Đen</option>
+                                            <option value="2">Xanh rêu</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Kích thước</label><br>
+                                        <div class="btn-group size-group" role="group">
+                                            <button type="button" class="btn btn-default">XS</button>
+                                            <button type="button" class="btn btn-default">S</button>
+                                            <button type="button" class="btn btn-default">M</button>
+                                            <button type="button" class="btn btn-default">L</button>
+                                            <button type="button" class="btn btn-default">XL</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-default" id="btn-contact">
+                                            <i class="glyphicon glyphicon-earphone"></i> Contact Seller
+                                        </button>
+                                        <button type="submit" class="btn btn-success">
+                                            <i class="glyphicon glyphicon-shopping-cart"></i> Add to Cart
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <!-- Vùng hiển thị thông báo sau khi bấm nút -->
+                                <div id="detail-message"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= 2.2.5 Đánh giá (Reviewer) ================= -->
+                <div class="thumbnail review-box" id="reviews">
+                    <div class="caption">
+                        <div class="description">
+                            <h4>Đánh giá sản phẩm</h4>
+                            <p>Khách hàng đánh giá cao chất vải mềm, thoáng mát và form áo đứng dáng sau nhiều lần giặt.
+                               Phần lớn khách chọn đúng size thường mặc.</p>
+                        </div>
+                        <div class="ratings">
+                            <p class="pull-right"><span class="review-total">3</span> đánh giá</p>
+                            <!-- Điểm trung bình hiển thị bằng Bootstrap Star Rating (chỉ đọc) -->
+                            <input class="rating-show" id="avg-rating" value="4.3">
+                            <span class="avg-text"><span class="avg-number">4.3</span> / 5 sao</span>
+                        </div>
+                    </div>
+
+                    <div class="well">
+                        <div class="text-right">
+                            <a class="btn btn-success" id="btn-leave-review">Leave a Review</a>
+                        </div>
+
+                        <!-- Form viết đánh giá (ẩn, hiện khi bấm Leave a Review) -->
+                        <form id="review-form" style="display:none">
+                            <div class="form-group">
+                                <label>Chấm điểm</label>
+                                <!-- Ô chọn sao: Bootstrap Star Rating (cho phép bấm chọn) -->
+                                <input id="review-star" class="rating-input" value="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="review-name">Tên của bạn</label>
+                                <input type="text" class="form-control" id="review-name" placeholder="VD: Minh Anh">
+                            </div>
+                            <div class="form-group">
+                                <label for="review-content">Nhận xét</label>
+                                <textarea class="form-control" id="review-content" rows="3" placeholder="Chia sẻ cảm nhận của bạn về sản phẩm"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-sm">Gửi đánh giá</button>
+                            <span class="text-danger review-error"></span>
+                        </form>
+
+                        <hr>
+
+                        <!-- ================= 2.2.6 Comments ================= -->
+                        <div id="comments">
+                            <div class="row comment">
+                                <div class="col-md-12">
+                                    <input class="rating-show" value="5">
+                                    <strong>Nguyễn Thu Hà</strong>
+                                    <span class="pull-right text-muted">1 ngày trước</span>
+                                    <p class="text-muted">Từ <em>TP. Hồ Chí Minh</em></p>
+                                    <p>Vải mềm, mặc mát, form chuẩn. Mình mua size M cao 1m60 nặng 50kg mặc vừa đẹp.</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row comment">
+                                <div class="col-md-12">
+                                    <input class="rating-show" value="4">
+                                    <strong>Trần Quốc Bảo</strong>
+                                    <span class="pull-right text-muted">3 ngày trước</span>
+                                    <p class="text-muted">Từ <em>Hà Nội</em></p>
+                                    <p>Giao hàng nhanh, đóng gói cẩn thận. Đã mua thêm màu đen.</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row comment">
+                                <div class="col-md-12">
+                                    <input class="rating-show" value="4">
+                                    <strong>Lê Ngọc Mai</strong>
+                                    <span class="pull-right text-muted">1 tuần trước</span>
+                                    <p class="text-muted">Từ <em>Đà Nẵng</em></p>
+                                    <p>Áo đẹp, đúng mô tả. Màu trắng hơi mỏng nên mặc thêm áo lót bên trong.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= 2.2.7 Other products ================= -->
+                <h3>Sản phẩm khác bạn có thể thích</h3>
+                <div class="row product-list">
+                    <div class="col-sm-6 col-md-4 product-item">
+                        <div class="thumbnail product" data-price="219000" data-old-price="269000">
+                            <div class="product-img">
+                                <a href="ecommerce-detail.html"><img src="images/products/ao-polo-navy.jpg" alt="Áo polo basic xanh navy"></a>
+                                <span class="label-discount"></span>
+                                <span class="label-tag label-new">New</span>
+                                <div class="add-to-cart">
+                                    <a href="#" class="glyphicon glyphicon-plus-sign btn-add-cart" data-toggle="tooltip" data-placement="top" title="Thêm vào giỏ"></a>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <h4 class="product-name"><a href="ecommerce-detail.html">Áo polo basic xanh navy</a></h4>
+                                <p class="product-desc">Vải cá sấu thoáng khí, cổ bẻ đứng form.</p>
+                                <p class="price-box"><span class="price"></span> <del class="old-price"></del></p>
+                                <div class="ratings">
+                                    <p class="pull-right review-count"><a href="ecommerce-detail.html#comments">15 đánh giá</a></p>
+                                    <input class="rating-show" value="4.4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 product-item">
+                        <div class="thumbnail product" data-price="399000" data-old-price="499000">
+                            <div class="product-img">
+                                <a href="ecommerce-detail.html"><img src="images/products/quan-jean-slim.jpg" alt="Quần jean Slim Fit"></a>
+                                <span class="label-discount"></span>
+                                <span class="label-tag label-best">Best Seller</span>
+                                <div class="add-to-cart">
+                                    <a href="#" class="glyphicon glyphicon-plus-sign btn-add-cart" data-toggle="tooltip" data-placement="top" title="Thêm vào giỏ"></a>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <h4 class="product-name"><a href="ecommerce-detail.html">Quần jean Slim Fit</a></h4>
+                                <p class="product-desc">Denim co giãn nhẹ, ống đứng vừa vặn.</p>
+                                <p class="price-box"><span class="price"></span> <del class="old-price"></del></p>
+                                <div class="ratings">
+                                    <p class="pull-right review-count"><a href="ecommerce-detail.html#comments">76 đánh giá</a></p>
+                                    <input class="rating-show" value="4.6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 product-item">
+                        <div class="thumbnail product" data-price="129000" data-old-price="159000">
+                            <div class="product-img">
+                                <a href="ecommerce-detail.html"><img src="images/products/tui-tote-canvas.jpg" alt="Túi tote canvas Mây"></a>
+                                <span class="label-discount"></span>
+                                <span class="label-tag label-best">Best Seller</span>
+                                <div class="add-to-cart">
+                                    <a href="#" class="glyphicon glyphicon-plus-sign btn-add-cart" data-toggle="tooltip" data-placement="top" title="Thêm vào giỏ"></a>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <h4 class="product-name"><a href="ecommerce-detail.html">Túi tote canvas Mây</a></h4>
+                                <p class="product-desc">Canvas dày, đựng vừa laptop 14 inch.</p>
+                                <p class="price-box"><span class="price"></span> <del class="old-price"></del></p>
+                                <div class="ratings">
+                                    <p class="pull-right review-count"><a href="ecommerce-detail.html#comments">210 đánh giá</a></p>
+                                    <input class="rating-show" value="4.9">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Mây Basic – Thời trang cơ bản cho mọi ngày. Bài tập học phần Phát triển ứng dụng TMĐT.</p>
+        </div>
+    </footer>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/xzoom.min.js"></script>
+    <script src="lib/star-rating.min.js"></script>
+    <script src="lib/svg-theme.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
