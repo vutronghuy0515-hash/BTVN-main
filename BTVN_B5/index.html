@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BTVN B5 | Phát triển ứng dụng TMĐT</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #243047;
+      background: #f4f7fb;
+      line-height: 1.6;
+    }
+    .hero {
+      padding: 54px 20px 46px;
+      color: white;
+      text-align: center;
+      background: linear-gradient(135deg, #183b68, #2876a8);
+    }
+    .hero .tag {
+      display: inline-block;
+      padding: 5px 12px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(255,255,255,.45);
+      border-radius: 999px;
+      font-size: 13px;
+      letter-spacing: .3px;
+    }
+    h1 { margin: 0 0 10px; font-size: clamp(28px, 5vw, 40px); }
+    .hero p { max-width: 680px; margin: 0 auto; color: #e8f2fb; }
+    main { width: min(1050px, calc(100% - 32px)); margin: 34px auto 56px; }
+    .intro { margin-bottom: 22px; }
+    .intro h2 { margin: 0 0 5px; font-size: 24px; }
+    .intro p { margin: 0; color: #627089; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      padding: 22px;
+      border: 1px solid #e1e8f0;
+      border-radius: 15px;
+      background: white;
+      box-shadow: 0 7px 22px rgba(30, 55, 90, .06);
+    }
+    .number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 12px;
+      border-radius: 11px;
+      color: #174b78;
+      background: #e7f1fb;
+      font-weight: 700;
+    }
+    .card h3 { margin: 0 0 7px; font-size: 20px; }
+    .card p { margin: 0 0 16px; color: #627089; }
+    .links { display: flex; flex-wrap: wrap; gap: 9px; margin-top: auto; }
+    a.btn {
+      display: inline-block;
+      padding: 9px 13px;
+      border-radius: 9px;
+      color: white;
+      background: #1e5d91;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    a.btn.secondary { color: #1e5d91; background: #eaf2f9; }
+    a.btn:hover { filter: brightness(.94); }
+    .note {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border-left: 4px solid #d39a36;
+      border-radius: 9px;
+      color: #5d4b28;
+      background: #fff8e9;
+    }
+    footer { padding: 20px; text-align: center; color: #77849a; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <span class="tag">PHÁT TRIỂN ỨNG DỤNG THƯƠNG MẠI ĐIỆN TỬ</span>
+    <h1>Bài tập tuần 5 – BTVN_B5</h1>
+    <p>Trang tổng hợp các bài thực hành. Thầy có thể chọn từng nội dung bên dưới để xem và kiểm tra kết quả.</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Nội dung bài tập</h2>
+      <p>Chọn một bài để mở trực tiếp trên trình duyệt.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <span class="number">01</span>
+        <h3>E-commerce</h3>
+        <p>Website thương mại điện tử gồm trang cửa hàng, trang chi tiết sản phẩm và trang trạng thái đơn hàng.</p>
+        <div class="links">
+          <a class="btn" href="ecommerce/ecommerce.html">Mở cửa hàng</a>
+          <a class="btn secondary" href="ecommerce/ecommerce-detail.html">Chi tiết sản phẩm</a>
+          <a class="btn secondary" href="ecommerce/ecommerce-status.html">Trạng thái đơn hàng</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="number">02</span>
+        <h3>Flappy Bird</h3>
+        <p>Trò chơi Flappy Bird được xây dựng bằng HTML, CSS, JavaScript và jQuery.</p>
+        <div class="links">
+          <a class="btn" href="flappy-bird/index.html">Chơi Flappy Bird</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="number">03</span>
+        <h3>jQuery LMS</h3>
+        <p>Script dùng trên trang môn học LMS UEH để lấy danh sách bài tập và thống kê bài tập theo từng chủ đề.</p>
+        <div class="links">
+          <a class="btn" href="jquery-lms/lms-assignments.js">Xem mã JavaScript</a>
+          <a class="btn secondary" href="jquery-lms/README.md">Hướng dẫn sử dụng</a>
+          <a class="btn secondary" href="https://lms.ueh.edu.vn/course/view.php?id=43861" target="_blank" rel="noopener">Mở LMS UEH</a>
+        </div>
+      </article>
+    </section>
+
+    <div class="note">
+      <strong>Lưu ý về jQuery LMS:</strong> Đây là script chạy trong Console của trình duyệt khi đã đăng nhập LMS UEH, không phải một website độc lập. Thầy có thể xem mã nguồn và hướng dẫn sử dụng qua các liên kết ở trên.
+    </div>
+  </main>
+
+  <footer>BTVN_B5 · Phát triển ứng dụng TMĐT</footer>
+</body>
+</html>
