@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flappy Bird - Chim Mây và rừng tre</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 class="game-title">Flappy Bird – Chim Mây vượt rừng tre</h1>
+
+    <!-- Khung game -->
+    <div id="container">
+        <!-- Level hiển thị ở góc trên bên trái -->
+        <div id="level">Level 1</div>
+
+        <!-- Con chim (ảnh sprites/bird.png) -->
+        <div id="bird"></div>
+
+        <!-- 2 ống tre: trên và dưới (ảnh sprites/pipe.png) -->
+        <div id="pole_1" class="pole"></div>
+        <div id="pole_2" class="pole"></div>
+
+        <!-- Nút bắt đầu phủ toàn khung game -->
+        <button id="play_btn">Bấm vào đây hoặc nhấn phím ↓ để chơi</button>
+
+        <!-- Điểm số -->
+        <span id="score">0</span>
+
+        <!-- Thông báo thua / thắng -->
+        <div id="message"></div>
+
+        <!-- Nút chơi lại -->
+        <button id="restart_btn">Chơi lại</button>
+    </div>
+
+    <!-- Nút bật/tắt chế độ tự động chơi -->
+    <button id="auto_btn" class="auto-btn">Auto Play: TẮT</button>
+
+    <p class="guide">Giữ phím <kbd>↓</kbd> (Arrow Down) để chim bay lên, nhả phím để chim rơi xuống.<br>
+        Bấm <b>Auto Play</b> để chim tự động chơi.<br>
+        Level 2: 5 điểm · Level 3: 20 điểm · Level 4: 40 điểm · 50 điểm: Chiến thắng!</p>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

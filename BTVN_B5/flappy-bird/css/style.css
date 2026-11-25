@@ -1,0 +1,165 @@
+button {
+    outline: none;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: #fdf6ec;
+    font-family: "Segoe UI", Arial, sans-serif;
+    text-align: center;
+}
+
+.game-title {
+    font-size: 22px;
+    color: #5d4037;
+    margin: 20px 0 10px;
+}
+
+/* Khung game: 350 x 480 như bài hướng dẫn gốc, nền trời hoàng hôn */
+#container {
+    position: relative;
+    height: 480px;
+    width: 350px;
+    border: 1px solid #ccc;
+    background: url(../sprites/bg.png);
+    overflow: hidden;
+    margin: 10px auto;
+    text-align: left;
+}
+
+/* Con chim: dùng ảnh riêng sprites/bird.png */
+#bird {
+    position: absolute;
+    width: 65px;
+    height: 42px;
+    background: url(../sprites/bird.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 20%;
+    left: 15%;
+    z-index: 2;
+}
+
+/* Ống khói được thay bằng ống tre: ảnh sprites/pipe.png lặp theo chiều dọc */
+.pole {
+    position: absolute;
+    height: 170px;
+    width: 60px;
+    background: url(../sprites/pipe.png) repeat-y;
+    right: -64px;
+    border: 2px solid #3e5e1d;
+    z-index: 1;
+}
+
+#pole_1 {
+    top: 0;
+    border-top: none;
+}
+
+#pole_2 {
+    bottom: 0;
+    border-bottom: none;
+}
+
+/* Level ở góc trên bên trái */
+#level {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #bf360c;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+#score {
+    font-size: 100px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: rgba(93, 64, 55, 0.6);
+    z-index: 3;
+}
+
+/* Thông báo Game Over / Chiến thắng */
+#message {
+    display: none;
+    position: absolute;
+    top: 190px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    z-index: 6;
+}
+#message.win { color: #ffeb3b; }
+
+#restart_btn {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    color: #555;
+    font-size: 35px;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    cursor: pointer;
+    display: none;
+    z-index: 7;
+}
+
+#play_btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: #5d4037;
+    cursor: pointer;
+    z-index: 8;
+}
+
+/* Nút Auto Play (nằm dưới khung game) */
+.auto-btn {
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #5d4037;
+    background: #fff;
+    border: 2px solid #8d6e63;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.auto-btn.on {
+    color: #fff;
+    background: #43a047;
+    border-color: #2e7d32;
+}
+
+.guide {
+    color: #6d4c41;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+kbd {
+    background: #5d4037;
+    color: #fff;
+    padding: 1px 6px;
+    border-radius: 3px;
+}
